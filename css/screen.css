@@ -1,0 +1,156 @@
+body{
+	background-color: #570d51;
+	color: white;
+	font-family: Arial;
+}
+#page{
+	#background-image: url('../images/page/page.png');
+	width: 1024px;
+	height: 800px;
+	display: block;
+	margin: 0px auto;
+}
+#topHeader{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 89px;
+	z-index: 3;
+	background-image: url('../images/page/header/topLink.png');
+}
+#logo{
+	background-image: url('../images/page/header/blog.png');
+	width: 339px;
+	height: 111px;
+	position: relative;
+	top: 9px;
+	left: 61px;
+	float: left;
+	z-index: 3;
+}
+#avatar{
+	float: right;
+	background-image: url('../images/page/header/avatar.png');
+	width: 155px;
+	height: 155px;
+	position: relative;
+	top: 16px;
+	right: 20px;
+	z-index: 3;
+}
+#content{
+	width: 878px;
+	margin: 0px auto;
+	clear: both;
+	display: block;
+	position: relative;
+	left: 8px;
+	top: -25px;
+}
+#bottomLink{
+	margin: 37px 0px 0px 0px;
+	clear: both;
+	position: absolute;
+	width: 100%;
+	height: 124px;
+	background-image: url('../images/page/footer/bottomLink.png');
+	left: 0px;
+	z-index: 3;
+}
+#footer_menu{
+	position: relative;
+	top: 50px;
+	margin: 0px auto;
+	display: block;
+	width: 380px;
+	z-index: 3;
+}
+#footer_menu a{
+	display: inline-block;
+	height: 82px;
+	width: 85px;
+	margin: 0px 5px;
+	cursor: pointer;
+}
+#footer_rss{
+	background-image: url('../images/page/footer/rss.png');
+}
+#footer_fb{
+	background-image: url('../images/page/footer/fb.png');
+}
+#footer_google{
+	background-image: url('../images/page/footer/google.png');
+}
+#footer_tisk{
+	background-image: url('../images/page/footer/tisk.png');
+}
+#navigation{
+	position: fixed;
+	height: 100%;
+	width: 220px;
+	background-repeat: no-repeat;
+	background-position: center right;
+	z-index: 2;
+	top: 0px;
+	left: -190px;
+	background-color: #570d51;
+	background-image: url('../images/page/menu/menu.png');
+	-webkit-transition: left 0.5s; /* Safari */
+    transition: left 0.5s;
+}
+#navigation:hover{
+	left: 0px;
+}
+#menu{
+	width: 190px;
+	position: relative;
+	margin-top: 120px;
+	z-index: 8;
+}
+#menu li{
+	display: block;
+	margin: 8px 0px;
+}
+#hledani{
+	position: absolute;
+	top: 130px;
+	right: 375px;
+	width: 130px;
+	z-index: 12;
+}
+#hledani_ikona{
+	display: inline-block;
+	float: right;
+	position: absolute;
+	right: 0px;
+	background-image: url('../images/page/header/hledani.png');
+	width: 42px;
+	height: 40px;
+	z-index: 100;
+	cursor: pointer;
+}
+#hledani_text{
+	width: 0px;
+	float: right;
+	position: relative;
+	top: 9px;
+	right: 27px;
+	-webkit-transition: width 0.5s; /* Safari */
+    transition: width 0.5s;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    outline: none;
+    padding: 4px 0px 4px 10px;
+}
+#zprava{
+	position: absolute;
+	top: 129px;
+	right: 331px;
+	background-image: url('../images/page/header/zprava.png');
+	width: 40px;
+	height: 41px;
+	display: block;
+	cursor: pointer;
+	z-index: 20;
+}
