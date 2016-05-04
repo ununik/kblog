@@ -46,7 +46,8 @@ body{
 	display: block;
 	position: relative;
 	left: 8px;
-	top: -25px;
+	top: 0px;
+	min-height: 500px;
 }
 #bottomLink{
 	margin: 37px 0px 0px 0px;
@@ -113,16 +114,16 @@ body{
 	margin: 8px 0px;
 }
 #hledani{
-	position: absolute;
-	top: 130px;
-	right: 375px;
+	float: right;
 	width: 130px;
-	z-index: 12;
+	z-index: 125;
+	position: relative;
+	top: 129px;
 }
 #hledani_ikona{
 	display: inline-block;
 	float: right;
-	position: absolute;
+	position: relative;
 	right: 0px;
 	background-image: url('../images/page/header/hledani.png');
 	width: 42px;
@@ -133,7 +134,7 @@ body{
 #hledani_text{
 	width: 0px;
 	float: right;
-	position: relative;
+	position: absolute;
 	top: 9px;
 	right: 27px;
 	-webkit-transition: width 0.5s; /* Safari */
@@ -144,13 +145,77 @@ body{
     padding: 4px 0px 4px 10px;
 }
 #zprava{
-	position: absolute;
+	float: right;
+	position: relative;
 	top: 129px;
-	right: 331px;
+	right: 0px;
 	background-image: url('../images/page/header/zprava.png');
 	width: 40px;
 	height: 41px;
 	display: block;
 	cursor: pointer;
 	z-index: 20;
+}
+.form_part{
+	margin: 20px 0px;
+}
+.form_part label{
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 5px 0px;
+}
+.form_part input{
+	border-radius: 7px;
+	border: 2px solid white;
+	outline: none;
+	display: block;
+	width: 100%;
+	font-size: 17px;
+	padding: 4px 2px;
+}
+.form_part textarea{
+	resize: none;
+	font-family: Arial;
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	padding: 4px 2px;
+	min-height: 200px;
+	outline: none;
+	border-radius: 7px;
+	border: 2px solid white;
+}
+.entries{
+	display: block;
+	width: 25%;
+	height: 150px;
+	float: left;
+	padding: 10px;
+	margin: 5px;
+	background-color: red;
+	overflow: hidden;
+	color: white;
+	text-decoration: none;
+}
+#pageNumbers{
+	clear: both;
+	text-align: left;
+}
+.pageNumber{
+	margin: 5px 1px 0px 1px;
+	display: inline-block;
+	background-color: white;
+	color: #570d51;
+	width: 25px;
+	font-size: 15px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 100%;
+	padding: 4px 0px;	
+	border: 2px solid white;
+}
+.pageNumberActive{
+	background-color: #570d51;
+	color: white;
 }

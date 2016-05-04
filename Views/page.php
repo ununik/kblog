@@ -1,9 +1,11 @@
 <?php
 $container = '<!DOCTYPE html>';
 $container .= '<html>';
+$container .= '<meta http-equiv="Content-language" content="cs">';
+$container .= '<meta charset="UTF-8">';
 $container .= '<head><link rel="stylesheet" type="text/css" href="css/screen.css">';
 $container .= '<script src="js/page.js"></script>';
-$container .= "<title>Titulek</title>";
+$container .= "<title>{$html->getTitle()}</title>";
 $container .= '</head>';
 $container .= '<body>';
 $container .= '<div id="page">';
@@ -12,34 +14,21 @@ $container .= '<div id="header">';
 $container .= '<div id="topHeader"></div>';
 $container .= '<div id="logo"></div>';
 $container .= '<div id="avatar"></div>';
-$container .= '<div id="hledani"><div id="hledani_ikona" onclick="searching()"></div><input type="text" id="hledani_text"></div>';
-$container .= '<a id="zprava"></a>';
+$container .= '<a id="zprava" href="index.php?page=message" title="Odeslat zprÃ¡vu"></a>';
+$container .= '<div id="hledani"><div id="hledani_ikona" onclick="searching()"></div><input type="text" id="hledani_text" onkeypress="if (event.keyCode == 13) { searching() };"></div>';
 $container .= '</div>';
 
 $container .= '<div id="content">';
-$container .= '<h2>Lorem ipsum</h2>';
-$container .= '<p>LOOOOoooooong text</p>';	
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
-$container .= '<p>LOOOOoooooong text</p>';
+$container .= $html->getContent();
 $container .= '</div>';
 
 $container .= '<div id="footer">';
 $container .= '<div id="bottomLink"></div>';
 $container .= '<div id="footer_menu">';
-$container .= '<a id="footer_rss" title="Pøihlásit se k odbìru"></a>';
-$container .= '<a id="footer_fb" title="Sdílet na Facebooku"></a>';
-$container .= '<a id="footer_google" title="Sdílet na G	oogle plus"></a>';
-$container .= '<a id="footer_tisk" title="Vytisknout"></a>';
+$container .= '<a id="footer_rss" title="PÅ™ihlÃ¡sit se k odbÄ›ru" href="?page=rss"></a>';
+$container .= '<a id="footer_fb" title="SdÃ­let na Facebooku"></a>';
+$container .= '<a id="footer_google" title="SdÃ­let na Google plus"></a>';
+$container .= '<a id="footer_tisk" title="Vytisknout" onclick="window.print()"></a>';
 $container .= '</div>';
 $container .= '</div>';
 
@@ -47,8 +36,9 @@ $container .= '</div>';
 
 $container .= '<div id="navigation">';
 $container .= '<ul id="menu">';
-$container .= '<li>Menu 1</li>';
-$container .= '<li>Menu 2</li>';
+foreach ($html->getMenu() as $menu) {
+    $container .= "<li>$menu</li>";
+}
 $container .= '</ul>';
 $container .= '</div>';
 
